@@ -1,0 +1,32 @@
+---Create a grocery store database
+
+create table store (id integer primary key, name text, price integer, genre text, quantity integer, rating text);
+Insert into store values
+(1, "Mario Kart",  79, "Racing", 100, "G"),
+(2, "Mario Tennis", 79, "Sport", 75, "G"),
+(3, "Mario Golf", 75, "Sport", 50, "G"),
+(4, "Mario Battle League", 85, "Sport", 100, "G"),
+(5, "Halo Infiinte", 85, "Shooting", 40, "MA"),
+(6, "Dota 2", 0, "MOBA", 1000, "M"),
+(7, "Mario Smash Bros.", 79, "Fighting", 102, "M"),
+(8, "Mario vs Sonic Olympics", 35, "Sport", 83, "G"),
+(9, "Donkey Kong Country", 45, "Adventure", 72, "PG"),
+(10, "Mortal Kombat 11", 79, "Fighting", 64, "MA"),
+(11, "Age of Empires 4", 100, "Strategy", 999, "MA"),
+(12, "Age of Empires 2", 20, "Strategy", 999, "MA"),
+(13, "RimWorld", 35, "Strategy", 850, "M"),
+(14, "Call of Duty", 85, "Shooting",220, "MA"),
+(15, "World of Warcraft", 120, "MMORPG", 523, "M"),
+(16, "League of Legends", 0, "MOBA", 888, "M");
+
+--- display the database ordered by price
+SELECT * FROM store
+ORDER BY price;
+
+---display total games valued less than $20
+Select SUM(quantity) from store
+Where price < 20;
+
+---display average price of all items
+SELECT AVG(price)
+FROM Store;
