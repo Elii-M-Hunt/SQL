@@ -76,3 +76,9 @@ INSERT INTO orders (customer_id, item, price)
  on customers.id=orders.customer_id
  group by name
  order by price desc;
+ 
+ ---SELECT that will show the title of each movie next to its sequel's title (or NULL if it doesn't have a sequel)
+Select movies.title, sequel.title as sequel
+from movies
+left Join movies sequel
+on movies.sequel_id = sequel.id;
